@@ -8,11 +8,11 @@ M_earth = 5.972e24  # Earth's mass, kg
 R_earth = 6371000  # Earth's radius, m
 
 rho_0 = 1.225  # Sea-level air density, kg/m^3
-Cd = 1.0  # Drag coefficient
-A = 10.0  # Rocket's cross-sectional area, m^2
-m0 = 10000.0  # Initial rocket mass, kg
-fuel_mass = 5000.0  # Fuel mass, kg
-v_exhaust = 3000.0  # Exhaust velocity, m/s
+Cd = 0.75  # Drag coefficient
+A = 10.75  # Rocket's cross-sectional area, m^2
+m0 = 22200.0  # Initial rocket mass, kg
+fuel_mass = 41000.0  # Fuel mass, kg
+v_exhaust = 3100.0  # Exhaust velocity, m/s
 T = 288.15  # Temperature, K
 k = 1.38e-23  # Boltzmann constant, J/K
 
@@ -21,12 +21,12 @@ def air_density(h):
     return rho_0 * np.exp(-m0 * 9.81 * h / (k * T))
 
 # Simulation parameters
-dt = 0.1  # Time step, s
-time_total = 300.0  # Total simulation time, s
+dt = 0.05  # Time step, s
+time_total = 500.0  # Total simulation time, s
 
 # Thrust and activation height ranges for the 3D plot
-thrust_values = np.linspace(50000, 200000, 10)  # Thrust values to test, N
-activation_heights = np.linspace(10000, 80000, 10)  # Activation heights to test, m
+thrust_values = np.linspace(300000, 600000, 50)  # Thrust values to test, N
+activation_heights = np.linspace(0, 80000, 50)  # Activation heights to test, m
 
 # Store results for 3D plot
 thrust_data = []
