@@ -194,7 +194,7 @@ for F_thrust in thrust_values:
             fuel_consumed += dm                
             
             # End simulation if rocket reaches the ground
-            if y <= R_earth:
+            if y <= (R_earth + 1120):
                 break
 
         # Store the results
@@ -282,7 +282,7 @@ for i, F_thrust in enumerate(thrust_values):
             fuel_consumed += dm                
             
             # End simulation if rocket reaches the ground
-            if y <= R_earth:
+            if y <= (R_earth + 1120):
                 break
 
         # Store the final landing velocity
