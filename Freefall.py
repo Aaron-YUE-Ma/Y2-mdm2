@@ -16,7 +16,7 @@ T = 288.15  # Temperature, K
 k = 1.38e-23  # Boltzmann constant, J/K
 m0 = 75000.0  # Initial rocket mass, kg
 fuel_mass = 0.3 * (75000 - 20569)  # Fuel mass, kg
-v_exhaust = 3000.0  # Exhaust velocity, m/s
+v_exhaust = 2500.0  # Exhaust velocity, m/s
 T = 288.15  # Temperature, K
 k = 1.38e-23  # Boltzmann constant, J/K
 
