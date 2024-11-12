@@ -202,7 +202,7 @@ for F_thrust in thrust_values:
         activation_height_data.append(h_activation)
         landing_velocity_data.append(abs(v))  # Use absolute value for landing speed
 
-print('velocity:', v)
+print('velocity:', min(landing_velocity_data))
 # Create 3D plot
 fig = plt.figure(figsize=(10, 7))
 ax = fig.add_subplot(111, projection='3d')
