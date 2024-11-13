@@ -207,13 +207,15 @@ min_index = np.argmin(landing_velocity_data)
 min_velocity = landing_velocity_data[min_index]
 min_thrust = thrust_data[min_index]
 min_activation_height = activation_height_data[min_index]
+max_velocity = max(landing_velocity_data)
 
 print(f"Minimum Landing Velocity: {min_velocity} m/s")
 print(f"Corresponding Thrust: {min_thrust} N")
 print(f"Corresponding Activation Height: {min_activation_height} m")
+print(f"Terminal Velocity: {max_velocity} m/s")
 
 # Create 3D plot
-fig = plt.figure(figsize=(10, 7))
+fig = plt.figure(figsize=(7, 7))
 ax = fig.add_subplot(111, projection='3d')
 
 # Plot data
